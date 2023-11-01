@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript1 : MonoBehaviour
+{
+
+    2 reference 
+        Rigidbody2D myRigidbody; 
+        1 reference
+        float jumpHeight = 3;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        myRigidbody = GetComponent<Rigidbody2D>();
+
+    }
+
+    // Update is called once per frame
+    0 reference
+    void Update()
+    {
+
+        transfrom.Translate(1.5f * Time.deltatTime, 0, 0);
+
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            myRigidbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+
+
+        }
+
+
+    }
+}
