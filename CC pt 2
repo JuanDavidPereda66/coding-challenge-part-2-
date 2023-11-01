@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+
+
+    float leftSide;
+    float rightSide;
+    float topSide;
+    float bottomSide;
+    float movementSpeed;
+    float horiMovement;
+    float vertiMovement; 
+    // Start is called before the first frame update
+    void Start()
+    {
+        movementSpeed = 4; 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        horiMovement = Input.GetAxis("Horizontal");
+        vertiMovement = Input.GetAxis("Verttical");
+
+        transform.Translate(horiMovement * Time.deltaTime * movementSpeed, 0, 0);
+        transform.Translate(0, vertiMovement * Time.deltaTime * movementSpeed, 0);
+
+        //transform.Translate(movementSpeed,0,0);
+        
+    }
+}
